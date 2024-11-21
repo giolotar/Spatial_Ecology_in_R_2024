@@ -1,6 +1,6 @@
 #spectral indeces
 
-library(imageRY)
+library(imageRy)
 library(terra)
 
 #listing files
