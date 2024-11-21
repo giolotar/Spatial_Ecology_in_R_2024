@@ -7,7 +7,7 @@ library(terra)
 
 im.list()
 
-#import data
+#import data for 2006
 
 m2006 <- im.import("matogrosso_ast_2006209_lrg.jpg")
 
@@ -16,3 +16,12 @@ m2006 <- im.import("matogrosso_ast_2006209_lrg.jpg")
 # band 3 = Green
 
 im.plotRGB(m2006, r=1, g=2, b=3)
+im.plotRGB(m2006, 
+im.plotRGB(m2006,
+
+# improt data for 1992
+
+m1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
+im.plotRGB(m1992, r=1, g=2, b=3)
+
+par(
