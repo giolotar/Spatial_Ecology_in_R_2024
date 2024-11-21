@@ -1,3 +1,18 @@
 #spectral indeces
 
 library(imageRY)
+library(terra)
+
+#listing files
+
+im.list()
+
+#import data
+
+m2006 <- im.import("matogrosso_ast_2006209_lrg.jpg")
+
+# band 1 = NIR
+# band 2 = Red 
+# band 3 = Green
+
+im.plotRGB(m2006, r=1, g=2, b=3)
