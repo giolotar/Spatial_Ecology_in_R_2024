@@ -74,4 +74,9 @@ ndvi2006 = dvi2006 / (m2006[[1]] + m2006[[2]])
 plot(ndvi1992, col=cl)
 plot(ndvi2006, col=cl)
 
-library(viridis
+#other colours 
+
+clvir <- colorRampPalette(c("violet", "dark blue", "blue", "green", "yellow"))(100) # specifying a color scheme
+par(mfrow=c(1,2))
+plot(ndvi1992, col=clvir)
+plot(ndvi2006, col=clvir)
