@@ -1,0 +1,36 @@
+library(terra)
+library(imageRy)
+
+im.list()
+
+EN01 <- im.import("EN_01.png")
+
+EN01 <- im.import("EN_01.png")
+EN13 <- im.import("EN_13.png")
+
+#let's plot it in multiframe 
+
+par(mfrow=c(1,2))
+plot(EN01)
+plot(EN13)
+
+#we can then make a difference between the images in temporal scales. Double programming parenthesis uses subsets
+dev.off() #to close the multiframe
+diff = EN01[[1]] - EN13[[1]]
+plot(diff)
+
+#example 2: greenland data. comes from copernicus program
+
+gr <- im.import("greenland")
+par(mfrow=c(1,2))
+plot(gr[[1]])
+plot(gr[[4]])
+
+difgr = gr[[1]] - gr[[4]]
+dev.off()
+plot(difgr)
+plot(gr)
+
+#plot the images in RGB
+
+im.plotRGB(gr, r=1, g=2, b=4)
